@@ -5,6 +5,7 @@ phases:
     runtime-versions:
       nodejs: 10
     commands:
+      - npm install
       - echo "Installing Something"
   pre_build:
     commands:
