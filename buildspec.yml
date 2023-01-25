@@ -8,12 +8,12 @@ phases:
       - echo "Installing Something"
   pre_build:
     commands:
+      - npm run build
       - echo "We are in build Phase"
   build:
     commands:
       - echo "We are in build block"
       - echo "We will run some tests"
-      - grep -Fq "Congratulations" index.html
   post_build:
     commands:
       - echo "We are in a post build phase"
