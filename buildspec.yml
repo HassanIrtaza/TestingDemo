@@ -1,19 +1,16 @@
 version: 0.2
-
 phases:
-  install:
+  install: 
     runtime-versions:
-      nodejs: 10
+      nodejs: 12
     commands:
-      - echo "Installing Something"
-  pre_build:
-    commands:
-      - npm run build
-      - echo "We are in build Phase"
+      - echo "Installing dependencies..."
+      - npm install
   build:
     commands:
-      - echo "We are in build block"
-      - echo "We will run some tests"
+      - echo "Building React project..."
+      - npm run build
   post_build:
     commands:
-      - echo "We are in a post build phase"
+      - echo "Updating files in the S3 bucket..."
+      
